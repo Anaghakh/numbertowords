@@ -63,10 +63,11 @@ func Convert(number int) (string, error) {
 			return result, nil
 		}
 	}
+
 	hundreds := number / 100
 
 	if hundreds > 0 {
-		result = words[hundreds] + " hundred "
+		result = result + words[hundreds] + " hundred "
 		number = number % 100
 		if number == 0 {
 			return result, nil
